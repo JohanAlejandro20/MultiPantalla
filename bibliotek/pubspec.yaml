@@ -54,6 +54,13 @@ flutter:
     - assets/images/matematicas.png
     - assets/images/ing_sistemas.png
     - assets/images/ing_industrial.jpg
+    - assets/images/psicologia.jpg
+    - assets/images/negocios.jpeg
+    - assets/images/indice.jpeg
+    - assets/images/matematicas.jpeg
+    - assets/images/sistemas.jpg
+    - assets/images/industrial.jpeg
+    - assets/images/no-image-available-sign-internet-260nw-261719003.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
