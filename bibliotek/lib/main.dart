@@ -1,5 +1,8 @@
+
+import 'package:bibliotek/blocs/them.dart';
 import 'package:bibliotek/views/login.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() => runApp(MyApp());
 
@@ -7,11 +10,30 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'BiblioteK',
+    return ChangeNotifierProvider(
+      create: (_) => ThemeChanger(ThemeData.dark()),
+      child: MaterialAppWithTheme(),
+    );
+  }
+}
 
-      //TEMA CLARITO
+class MaterialAppWithTheme extends StatelessWidget  {
+
+  @override
+  Widget build (BuildContext context) {
+
+final theme = Provider.of<ThemeChanger>(context);
+
+    return MaterialApp(
+      theme: theme.getTheme(),
+      home: Login(),
+    );
+  }
+}
+
+
+
+/*//TEMA CLARITO
       //  theme: ThemeData(
       //   primarySwatch: Colors.blue,
       //   primaryColor: Colors.indigo,
@@ -38,13 +60,4 @@ class MyApp extends StatelessWidget {
       //   cardTheme: CardTheme(
       //    shadowColor: Colors.teal,
       //    elevation: 9.0,
-      //   ),
-        
-      // ),
-      home: Login(),
-    );
-  }
-}
-
-
-
+      //   ),*/
