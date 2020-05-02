@@ -39,7 +39,7 @@ class _HistorialState extends State<Historial> {@override
       child: new Column(
         children: <Widget>[
           // Agregamos una imagen consumida desde internet
-          new Image.asset(widget.card.imagenLibro,width: 250.0,),
+          new Image.asset(widget.card?.imagenLibro?? "assets/images/no-image-available-sign-internet-260nw-261719003.jpg",),
           // Agregamos un contenedor para el texto
           new Container(
             padding: const EdgeInsets.all(10.0), // Un padding para todo
@@ -51,42 +51,42 @@ class _HistorialState extends State<Historial> {@override
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(fontWeight: FontWeight.bold),
             ),
-            Text(widget.card.nombre),
+            Text(widget.card?.nombre?? "Seleccione un libro"),
             Text(
                "Autor del libro:",
                 textAlign: TextAlign.center,
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(fontWeight: FontWeight.bold),
             ),
-            Text(widget.card.autor),
+            Text(widget.card?.autor?? ""),
              Text(
                "Esitorial del libro:",
                 textAlign: TextAlign.center,
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(fontWeight: FontWeight.bold),
             ),
-            Text(widget.card.editorial),
+            Text(widget.card?.editorial?? ""),
              Text(
                "Paginas del libro :",
                 textAlign: TextAlign.center,
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(fontWeight: FontWeight.bold),
             ),
-            Text(widget.card.paginas),
+            Text(widget.card?.paginas?? ""),
              Text(
                "Disponibilidad del libro :",
                 textAlign: TextAlign.center,
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(fontWeight: FontWeight.bold),
             ),
-            Text(widget.card.disponibilidad),
+            Text(widget.card?.disponibilidad?? ""),
              Text(
                "Tiempo restante del libro :",
                 textAlign: TextAlign.center,
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(fontWeight: FontWeight.bold),
             ),
-            Text(widget.card.tiempoRestante),
+            Text(widget.card?.tiempoRestante?? ""),
             
               ],
             )

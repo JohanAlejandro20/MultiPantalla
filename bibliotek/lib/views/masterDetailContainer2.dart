@@ -10,7 +10,7 @@ class MasterDetailContainer2 extends StatefulWidget {
 }
 
 class _ItemMasterDetailContainerState extends State<MasterDetailContainer2> {
-  static const int kDualPanelBreakpoint = 600;
+  static const int kDualPanelBreakpoint = 300;
 
   Libro _selectedCard;
 
